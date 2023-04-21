@@ -92,12 +92,12 @@ public class User {
     }
 
     //methods
-    // generate a password for the user based on their first name, last name, birth year, favorite color, animal, and season, and print it out
+    // generate a password for the user based on their first name, last name, birth year, favorite color, animal, and season
     public void generatePassword() {
-        // get the first two letters of the user's first name
-        String firstLetters = firstName.substring(0, 2);
-        // get the first two letters of the user's last name
-        String lastLetters = lastName.substring(0, 2);
+        // get the first two letters of the user's first name and convert the first letter to uppercase
+        String firstLetters = firstName.substring(0, 1).toUpperCase() + firstName.substring(1, 2);
+        // get the first two letters of the user's last name and convert the second letter to uppercase
+        String lastLetters = lastName.substring(0, 1) + lastName.substring(1,2).toUpperCase();
         // get the last two digits of the user's birth year
         String birthYear = Integer.toString(birthyear);
         String lastTwoDigits = birthYear.substring(2, 4);
