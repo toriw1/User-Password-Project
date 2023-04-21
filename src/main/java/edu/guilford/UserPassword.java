@@ -28,6 +28,13 @@ public class UserPassword
         // print out the user's last name
         System.out.println( "Your last name is: " + user1.getLastName() );
 
+        // get and set the user's email, then print it out
+        System.out.println( "Please enter your email: " );
+        String email = keyboard.next();
+        user1.setEmail(email);
+        // print out the user's email
+        System.out.println( "Your email is: " + user1.getEmail() );
+
         // get and set the user's birthyear, then print it out
         System.out.println( "Please enter your birthyear: " );
         int birthyear = keyboard.nextInt();

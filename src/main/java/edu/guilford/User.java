@@ -6,7 +6,6 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    private String holiday;
     private int birthyear;
     private String favcolor;
     private String favanimal;
@@ -16,7 +15,7 @@ public class User {
     public User() {
     }
 
-    public User(String firstName, String lastName, String password, String email, String holiday, int birthyear, String favcolor, String favanimal, String favseason) {
+    public User(String firstName, String lastName, String password, String email, int birthyear, String favcolor, String favanimal, String favseason) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
@@ -58,14 +57,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getHoliday() {
-        return holiday;
-    }
-
-    public void setHoliday(String holiday) {
-        this.holiday = holiday;
     }
 
     public int getBirthYear() {
@@ -117,7 +108,7 @@ public class User {
         // convert the first character of the user's favorite season to uppercase but include the first three characters in the password
         String upperCaseSeason = favseason.substring(0, 1).toUpperCase() + favseason.substring(1, 3);
         // concatenate the first letter of the user's first name, last name, birth year, favorite color, animal, and season
-        String password = firstLetters + lastLetters + lastTwoDigits + upperCaseColor + upperCaseAnimal + "!" + upperCaseSeason;
+        String password = firstLetters + lastTwoDigits + "?" + upperCaseColor + upperCaseAnimal + "!" + upperCaseSeason + lastLetters;
         // print out the password
         System.out.println("Your password is: " + password);
     }
