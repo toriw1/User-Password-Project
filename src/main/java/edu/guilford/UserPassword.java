@@ -70,23 +70,16 @@ public class UserPassword
 
         // call the method to generate a password
         user1.generatePassword();
+        System.out.println("Your password is: " + user1.getPassword());
         
         // Use the AES encryption algorithm to setKey and encrypt the password from AES.java
-
-        // how do you call the method from AES.java?
-        // call the method by creating an object of the class
-        // what is the object in the AES class?
-        // the object is the AES object
-        // how to use the AES encryption algorithm to encrypt the password for the user1 object?
-        // create an object of the AES class
         AES AES1 = new AES();
         AES1.setKey("ThisIsASecretKey");
         String strToEncrypt = user1.getPassword();
-        String encryptedString = AES.encrypt(strToEncrypt, AES1.secretKey);
+        String encryptedString = AES.encrypt(strToEncrypt, "ThisIsASecretKey");
+        String encryptedString1 = AES.encrypt(strToEncrypt, "ThisIsASecretKey");
         System.out.println("Encrypted password: " + encryptedString);
-        String encryptedPassword = aes.encrypt(userMe.getPassword());
+        String encryptedPassword = AES.encrypt(user1.getPassword(),"ThisIsASecretKey");
         System.out.println("Your encrypted password is: " + encryptedPassword);
-            before:  AES aes = new AES();
-
     }
 }
