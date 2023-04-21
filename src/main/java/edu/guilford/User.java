@@ -107,7 +107,7 @@ public class User {
         String upperCaseAnimal = favanimal.substring(0, 1).toUpperCase() + favanimal.substring(1);
         // convert the first character of the user's favorite season to uppercase but include the first three characters in the password
         String upperCaseSeason = favseason.substring(0, 1).toUpperCase() + favseason.substring(1, 3);
-        // concatenate the first letter of the user's first name, last name, birth year, favorite color, animal, and season
+        // concatenate the first letter of the user's first name,birth year, favorite color, animal, season, and last name to create the password
         String password = firstLetters + lastTwoDigits + "?" + upperCaseColor + upperCaseAnimal + "!" + upperCaseSeason + lastLetters;
         // print out the password
         System.out.println("Your password is: " + password);

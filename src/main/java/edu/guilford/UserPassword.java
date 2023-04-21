@@ -36,7 +36,7 @@ public class UserPassword
         System.out.println( "Your email is: " + user1.getEmail() );
 
         // get and set the user's birthyear, then print it out
-        System.out.println( "Please enter your birthyear: " );
+        System.out.println( "Please enter your birthyear (all four digits, ex: 2001): " );
         int birthyear = keyboard.nextInt();
         user1.setBirthYear(birthyear);
         // print out the user's birthyear
