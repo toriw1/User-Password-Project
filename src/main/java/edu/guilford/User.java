@@ -112,6 +112,4 @@ public class User {
         // print out the password
         System.out.println("Your password is: " + password);
     }
-
-
 }

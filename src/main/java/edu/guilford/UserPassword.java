@@ -13,9 +13,11 @@ public class UserPassword
         //instantiate a User object
         User user1 = new User();
 
+        // create a Scanner object to read input from the keyboard
+        Scanner keyboard = new Scanner(System.in);
+
         // get and set the user's first name, then print it out
         System.out.println( "Please enter your first name: " );
-        Scanner keyboard = new Scanner(System.in);
         String firstname = keyboard.next();
         user1.setFirstName(firstname);
         // print out the user's first name
@@ -63,9 +65,28 @@ public class UserPassword
         // print out the user's favorite season
         System.out.println( "Your favorite season is: " + user1.getFavSeason() );
 
+        // close the Scanner object
+        keyboard.close();
+
         // call the method to generate a password
         user1.generatePassword();
         
+        // Use the AES encryption algorithm to setKey and encrypt the password from AES.java
+
+        // how do you call the method from AES.java?
+        // call the method by creating an object of the class
+        // what is the object in the AES class?
+        // the object is the AES object
+        // how to use the AES encryption algorithm to encrypt the password for the user1 object?
+        // create an object of the AES class
+        AES AES1 = new AES();
+        AES1.setKey("ThisIsASecretKey");
+        String strToEncrypt = user1.getPassword();
+        String encryptedString = AES.encrypt(strToEncrypt, AES1.secretKey);
+        System.out.println("Encrypted password: " + encryptedString);
+        String encryptedPassword = aes.encrypt(userMe.getPassword());
+        System.out.println("Your encrypted password is: " + encryptedPassword);
+            before:  AES aes = new AES();
 
     }
 }
